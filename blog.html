@@ -32,9 +32,9 @@
                             open. localStorage lasts until the user deletes it. Lets say that a user wanted to save a
                             login username and password he would want to use sessionStorageover localStorage for
                             security reasons (ie. another person accessing their account at a later time). But if he
-                            wanted to save a user's settings on their machine you would probably want localStorage. All
-                            in all: localStorage - use for long term use. sessionStorage - use when you need to store
-                            somthing that changes or somthing temporary. </div>
+                            wanted to save a user's settings on their machine you would probably want localStorage. <br>
+                            All in all: localStorage - use for long term use. sessionStorage - use when you need to
+                            store somthing that changes or somthing temporary. </div>
                     </div>
                 </div>
                 <div class="accordion-item m-3">
@@ -45,43 +45,50 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#accordionExample">
-                        <div class="accordion-body"> Tailwind offers predesigned widgets to build a site from scratch
-                            with fast UI development. Bootstrap comes with a set of pre-styled responsive, mobile-first
-                            components that possess a definite UI kit. Tailwind CSS uses a set of utility classes to
-                            create a neat UI with more flexibility and uniqueness. Sites created using Bootstrap follow
-                            the generic pattern that makes them look identical. </div>
+                        <div class="accordion-body"> In a programming environment, the global scope is the scope that
+                            contains, and is visible in, all other scopes. In client-side JavaScript, the global scope
+                            is generally the web page inside which all the code is being executed. So, in javascript the
+                            whole document is global scope and all the other functions and variables are contained in
+                            this global scope. <br> A variable when declared inside the if or switch conditions or
+                            inside for or while loops, are accessible within that particular condition or loop. To be
+                            consise the variables declared inside the curly braces are called as within block scope.
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-item m-3">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> What is
-                            CSS box model? </button>
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> How
+                            does Event Loop work in JavaScript? </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#accordionExample">
-                        <div class="accordion-body"> In web development, the CSS box model refers to how HTML elements
-                            are modeled in browser engines and how the dimensions of those HTML elements are derived
-                            from CSS properties. It is a fundamental concept for the composition of HTML webpages.CSS
-                            determines the size, position, and properties (color, background, border size, etc.) of
-                            these boxes. Every box is composed of four parts (or areas), defined by their respective
-                            edges: the content edge, padding edge, border edge, and margin edge. </div>
+                        <div class="accordion-body"> The Event Loop has one simple job — to monitor the Call Stack and
+                            the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event
+                            from the queue and will push it to the Call Stack, which effectively runs it. Such an
+                            iteration is called a tick in the Event Loop. <br> Event loop is an endless loop, which
+                            waits for tasks, executes them and then sleeps until it receives more tasks. The event loop
+                            executes tasks from the event queue only when the call stack is empty i.e. there is no
+                            ongoing task. The event loop allows us to use callbacks and promises. </div>
                     </div>
                 </div>
                 <div class="accordion-item m-3">
                     <h2 class="accordion-header" id="headingFour">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> What are
-                            semantic tags? </button>
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> In which
+                            cases JavaScript returns undefined? </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                         data-bs-parent="#accordionExample">
-                        <div class="accordion-body"> The HTML semantics refers to the tags that provide meaning to an
-                            HTML page rather than just presentation. It makes HTML more comprehensible by better
-                            defining the different sections and layout of web pages. The core characteristic of a
-                            semantic element is that it clearly communicated its meaning to both the developer and the
-                            browser. Header, Nav, Section, Article, Aside, Footer; these are examples of semantic tags.
-                        </div>
+                        <div class="accordion-body"> The undefined is a primitive type in JavaScript. So the undefined
+                            is a type. And the undefined type has exactly one value that is undefined. JavaScript uses
+                            the undefined value in the following situations. 1) Accessing an uninitialized variable. 2)
+                            Accessing a non-existing property of an object. 3) Function parameters: When you call a
+                            function with a number of parameters, you often pass the same number of arguments. If you
+                            donot pass argument for any parameter and call the function, then it will return undefined
+                            for that parameter. 4) A function that doesn’t have a return statement implicitly returns
+                            undefined. 5) Accessing out-of-bounds array elements When you access an array element that
+                            is out-of-bounds, you’ll get the undefined value. </div>
                     </div>
                 </div>
             </div>
