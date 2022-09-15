@@ -8,7 +8,7 @@ const modalBackground = document.getElementById("modal-background");
 // variables
 let userText = "";
 let errorCount = 0;
-let startTime = 5;
+let startTime = new Date().getTime();
 let questionText = "";
 
 // Load and display question
@@ -22,6 +22,7 @@ fetch("texts.json")
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
+  console.log(newLetter);
 
   // Handle backspace press
   if (newLetter == "Backspace") {
@@ -88,7 +89,7 @@ const gameOver = () => {
   addHistory(questionText, timeTaken, errorCount);
 
   // restart everything
-  startTime = null;
+  startTime = new Date().getTime();
   errorCount = 0;
   userText = "";
   display.classList.add("inactive");
@@ -101,27 +102,31 @@ const closeModal = () => {
 
 const start = () => {
   // If already started, do not start again
-  if (startTime) return;
+  if (startTime) {
+    ;
 
-  let count = 3;
-  countdownOverlay.style.display = "flex";
+    let count = 3;
+    countdownOverlay.style.display = "flex";
 
-  const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = '<h1>${count}</h1>';
+    const startCountdown = setInterval(() => {
+      countdownOverlay.innerHTML = `<h1>${count}</h1>`;
+    })
+  }
 
-    // finished timer
-    if (count == 0) {
-      // -------------- START TYPING -----------------
-      document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
-      display.classList.remove("inactive");
+  // finished timer
+  if (count === 0) {
+    // -------------- START TYPING -----------------
+    clearInterval();
+    display.addEventListener("keydown", typeController);
+    countdownOverlay.style.display = "flex";
+    display.classList.remove("inactive");
 
-      clearInterval(startCountdown);
-      startTime = new Date().getTime();
-    }
-    count--;
-  }, 1000);
-};
+    startTime = new Date().getTime();
+  }
+}
+//     count--;
+//   }, 1000);
+// };
 
 // START Countdown
 startBtn.addEventListener("click", start);
